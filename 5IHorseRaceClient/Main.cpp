@@ -982,7 +982,10 @@ void Main() {
 	Window::SetTitle(L"5I Horse Race Manager");
 	Graphics::SetBackground(Color(204));
 	ScreenCapture::EnableScreenshot(false);
-	Window::SetFullscreen(true, Size(1920, 1080));
+	System::SetExitEvent(WindowEvent::Manual);
+	Window::SetStyle(WindowStyle::Sizeable);
+	Window::Maximize();
+	System::Update();;
 	FontManager::Register(L"/64608");
 	UI ui;
 	Backend backend(ui);
