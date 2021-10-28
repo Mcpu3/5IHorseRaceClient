@@ -990,6 +990,9 @@ void Main() {
 	UI ui;
 	Backend backend(ui);
 	while (System::Update()) {
+		if (!Window::Maximized()) {
+			Window::Maximize();
+		}
 		backend.update(ui);
 		ui.update();
 		ui.draw();
