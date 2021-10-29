@@ -53,11 +53,11 @@ public:
 class HorseName {
 public:
 	enum class Name {
-		A,
-		B,
-		C,
-		D,
-		E,
+		Horse,
+		Dog,
+		Rabbit,
+		Tiger,
+		Giraffe,
 		None
 	};
 
@@ -77,16 +77,16 @@ public:
 public:
 	String to_string() const {
 		switch (name) {
-		case Name::A:
-			return L"A";
-		case Name::B:
-			return L"B";
-		case Name::C:
-			return L"C";
-		case Name::D:
-			return L"D";
-		case Name::E:
-			return L"E";
+		case Name::Horse:
+			return L"おうまさん";
+		case Name::Dog:
+			return L"わんこちゃん";
+		case Name::Rabbit:
+			return L"うさぎちゃん";
+		case Name::Tiger:
+			return L"虎";
+		case Name::Giraffe:
+			return L"きりんさん";
 		}
 		return L"";
 	}
@@ -953,25 +953,25 @@ private:
 private:
 	HorseName::Name from_string(const String name) {
 		HorseName _horse_name;
-		_horse_name.name = HorseName::Name::A;
+		_horse_name.name = HorseName::Name::Horse;
 		if (name == _horse_name.to_string()) {
-			return HorseName::Name::A;
+			return HorseName::Name::Horse;
 		}
-		_horse_name.name = HorseName::Name::B;
+		_horse_name.name = HorseName::Name::Dog;
 		if (name == _horse_name.to_string()) {
-			return HorseName::Name::B;
+			return HorseName::Name::Dog;
 		}
-		_horse_name.name = HorseName::Name::C;
+		_horse_name.name = HorseName::Name::Rabbit;
 		if (name == _horse_name.to_string()) {
-			return HorseName::Name::C;
+			return HorseName::Name::Rabbit;
 		}
-		_horse_name.name = HorseName::Name::D;
+		_horse_name.name = HorseName::Name::Tiger;
 		if (name == _horse_name.to_string()) {
-			return HorseName::Name::D;
+			return HorseName::Name::Tiger;
 		}
-		_horse_name.name = HorseName::Name::E;
+		_horse_name.name = HorseName::Name::Giraffe;
 		if (name == _horse_name.to_string()) {
-			return HorseName::Name::E;
+			return HorseName::Name::Giraffe;
 		}
 		return HorseName::Name::None;
 	}
